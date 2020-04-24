@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'main_window.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(525, 317)
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.tabWidget = QtWidgets.QTabWidget(Form)
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.tab)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label_3 = QtWidgets.QLabel(self.tab)
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout.addWidget(self.label_3)
+        self.lineEdit = QtWidgets.QLineEdit(self.tab)
+        self.lineEdit.setInputMask("")
+        self.lineEdit.setText("")
+        self.lineEdit.setMaxLength(6)
+        self.lineEdit.setCursorMoveStyle(QtCore.Qt.VisualMoveStyle)
+        self.lineEdit.setObjectName("lineEdit")
+        self.verticalLayout.addWidget(self.lineEdit)
+        self.pushButton = QtWidgets.QPushButton(self.tab)
+        self.pushButton.setObjectName("pushButton")
+        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout_2.addLayout(self.verticalLayout)
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.tab_2)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.label_2 = QtWidgets.QLabel(self.tab_2)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout_4.addWidget(self.label_2)
+        self.gridLayout_2 = QtWidgets.QGridLayout()
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.timeEdit = QtWidgets.QTimeEdit(self.tab_2)
+        self.timeEdit.setEnabled(False)
+        self.timeEdit.setObjectName("timeEdit")
+        self.gridLayout_2.addWidget(self.timeEdit, 0, 1, 1, 1)
+        self.radioButton = QtWidgets.QRadioButton(self.tab_2)
+        self.radioButton.setObjectName("radioButton")
+        self.gridLayout_2.addWidget(self.radioButton, 0, 0, 1, 1)
+        self.verticalLayout_4.addLayout(self.gridLayout_2)
+        self.pushButton_2 = QtWidgets.QPushButton(self.tab_2)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.verticalLayout_4.addWidget(self.pushButton_2)
+        self.tabWidget.addTab(self.tab_2, "")
+        self.verticalLayout_3.addWidget(self.tabWidget)
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.klineedit = QtWidgets.QLineEdit(Form)
+        self.klineedit.setText("")
+        self.klineedit.setObjectName("klineedit")
+        self.gridLayout.addWidget(self.klineedit, 0, 1, 1, 1)
+        self.toolButton = QtWidgets.QToolButton(Form)
+        self.toolButton.setObjectName("toolButton")
+        self.gridLayout.addWidget(self.toolButton, 0, 2, 1, 1)
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.verticalLayout_3.addLayout(self.gridLayout)
+
+        self.retranslateUi(Form)
+        self.tabWidget.setCurrentIndex(1)
+        self.radioButton.clicked['bool'].connect(self.timeEdit.setEnabled)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Random finder"))
+        self.label_3.setText(_translate("Form", "Введіть 6 рандомних символів: "))
+        self.lineEdit.setPlaceholderText(_translate("Form", "7i55rw"))
+        self.pushButton.setText(_translate("Form", "Скачать"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "Direct Download"))
+        self.label_2.setText(_translate("Form", "Рандомне завантаження фото з сайту https://prnt.sc"))
+        self.radioButton.setText(_translate("Form", "Timer"))
+        self.pushButton_2.setText(_translate("Form", "Старт"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "Random Download"))
+        self.toolButton.setText(_translate("Form", "..."))
+        self.label.setText(_translate("Form", "PATH:"))
